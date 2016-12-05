@@ -16,12 +16,13 @@ new Vue({
   methods: {
     close: function () {
 
+      // Toggle success variable boolean
       if(this.success == true){
         this.success = false;
       }else{
         this.success = true;
       }
-      
+
     }
   }
 

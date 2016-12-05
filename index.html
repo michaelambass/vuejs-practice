@@ -3,22 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>VueJS Tutorial</title>
+
+    <style>
+
+    </style>
+
   </head>
   <body>
 
 
     <div id="app">
 
+      <!-- Add input to change content -->
+      <input type="text" v-model="message" />
+      <input type="text" :value="message" />
+
       <!-- v-bind: or :href to add in attributes -->
       <a :href="link + '/search'">{{message}}</a>
 
-      <!-- button to close v-on:event -->
+      <!-- button to close v-on:event - can be @click="" / @event="" -->
       <button v-on:click="close">Fermer</button>
 
       <!-- conditional display with v-if or v-show (v-show is using display, on v-if it's based on the DOM) -->
       <div class="success" v-if="success">
         <p>Bravo, votre enregistrement à marcher</p>
-      </div>      
+      </div>
 
       <!-- conditional else (can also be v-if="!success") -->
       <div v-else>
