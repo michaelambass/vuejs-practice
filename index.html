@@ -12,6 +12,21 @@
       <!-- v-bind: or :href to add in attributes -->
       <a :href="link + '/search'">{{message}}</a>
 
+      <!-- conditional display with v-if or v-show (v-show is using display, on v-if it's based on the DOM) -->
+      <div class="success" v-if="success">
+        <p>Bravo, votre enregistrement à marcher</p>
+      </div>
+
+      <!-- conditional else (can also be v-if="!success") -->
+      <div v-else>
+        <p>Malheureusement, cela n'a pas marché</p>
+      </div>
+
+      <!-- for loop -->
+      <ul>
+        <li v-for="person in persons">{{person}}</li>
+      </ul>
+
     </div>
 
     <!-- javascript files -->
