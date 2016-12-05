@@ -12,10 +12,13 @@
       <!-- v-bind: or :href to add in attributes -->
       <a :href="link + '/search'">{{message}}</a>
 
+      <!-- button to close v-on:event -->
+      <button v-on:click="close">Fermer</button>
+
       <!-- conditional display with v-if or v-show (v-show is using display, on v-if it's based on the DOM) -->
       <div class="success" v-if="success">
         <p>Bravo, votre enregistrement à marcher</p>
-      </div>
+      </div>      
 
       <!-- conditional else (can also be v-if="!success") -->
       <div v-else>
