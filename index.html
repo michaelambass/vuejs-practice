@@ -9,12 +9,14 @@
 
     <div id="app">
 
-      <!-- v-bind: to add in attributes -->
-      <a v-bind:href="link + '/search'">{{message}}</a>
+      <!-- v-bind: or :href to add in attributes -->
+      <a :href="link + '/search'">{{message}}</a>
 
     </div>
 
+    <!-- javascript files -->
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="js/app.js"></script>
+
   </body>
 </html>
