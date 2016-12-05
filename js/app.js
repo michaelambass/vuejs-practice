@@ -2,6 +2,12 @@
 new Vue({
 
   // selector
-  el: '#app'
-  
+  el: '#app',
+
+  // data - contains all variables
+  data: {
+    message: 'Salut les gens'
+  }
+
+
 })
