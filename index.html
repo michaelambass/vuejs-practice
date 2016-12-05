@@ -5,7 +5,13 @@
     <title>VueJS Tutorial</title>
 
     <style>
+    .success{
+      border: 2px solid green;
+    }
 
+    .error{
+      border: 2px solid red;
+    }
     </style>
 
   </head>
@@ -18,6 +24,10 @@
       <input type="text" v-model="message" />
       <input type="text" :value="message" />
 
+      <div :class="success ? 'success' : 'error'">
+        Etat
+      </div>
+
       <!-- v-bind: or :href to add in attributes -->
       <a :href="link + '/search'">{{message}}</a>
 
@@ -25,7 +35,7 @@
       <button v-on:click="close">Fermer</button>
 
       <!-- conditional display with v-if or v-show (v-show is using display, on v-if it's based on the DOM) -->
-      <div class="success" v-if="success">
+      <div v-if="success">
         <p>Bravo, votre enregistrement à marcher</p>
       </div>
 
