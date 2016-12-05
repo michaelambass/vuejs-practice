@@ -6,7 +6,8 @@ new Vue({
 
   // data - contains all variables
   data: {
-    message: 'Salut les gens'
+    message: 'Salut les gens',
+    link: 'http://www.google.com'
   }
 
 
