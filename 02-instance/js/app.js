@@ -6,7 +6,7 @@ var app = new Vue({
 
   // data - contains all variables
   // if inspected, the object will have for each data a get & set informations
-  // note : all the datas must be declared here before (no dynamic for the moment (see assign))
+  // note : all the datas must be declared here before (no dynamic for the moment (see as))
   data: {
     message: 'Salut les gens',
     link: 'http://www.google.com',

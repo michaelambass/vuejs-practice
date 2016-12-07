@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS Tutorial</title>
+
+    <style>
+        # CSS styles .success {
+            border: 2px solid green;
+        }
+
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- Add input to change content -->
+        <input type="text" v-model="message" />
+        <input type="text" :value="message" />
+
+        <div :class="success ? 'success' : 'error'">
+            Etat
+        </div>
+
+        <!-- v-bind: or :href to add in attributes -->
+        <a :href="link + '/search'">{{message}}</a>
+
+        <!-- button to close v-on:event - can be @click="" / @event="" -->
+        <button v-on:click="close">Fermer</button>
+
+        <!-- conditional display with v-if or v-show (v-show is using display, on v-if it's based on the DOM) -->
+        <div v-if="success">
+            <p>Bravo, votre enregistrement à marcher</p>
+        </div>
+
+        <!-- conditional else (can also be v-if="!success") -->
+        <div v-else>
+            <p>Malheureusement, cela n'a pas marché</p>
+        </div>
+
+        <!-- for loop -->
+        <ul>
+            <li v-for="person in persons">{{person}}</li>
+        </ul>
+
+        <!-- display persons array -->
+        {{persons}}
+
+        <button type="button" name="button" @click="addPerson">Ajouter une personne</button>
+
+        <message type="test" message="Mon message"></message>
+
+        <counter></counter>
+        <counter></counter>
+
+    </div>
+
+    <!-- javascript files -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
